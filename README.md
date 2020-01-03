@@ -51,7 +51,7 @@ Basically, you have two options to install and deploy the Maze Runner game:
     $ git clone https://github.com/pewpew-game/pew-pygame.git
     $ cd pew-pygame
     $ python3 -m pip install -r requirements.txt
-    # copy 'lib', 'config' and maze_runner.py in the current folder
+    # copy 'lib', 'config' and maze_runner.py into the current folder
     $ python3 maze_runner.py
 ```
 
