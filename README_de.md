@@ -59,3 +59,8 @@ Für das Weiterentwickeln und das Erstellen eigener Konfigurationen empfehle ich
 
 &nbsp;
 
+## Lizenz ##
+Alle Dateien dieses Repositorys gelten als freie Software und können entsprechend der WTFPL Lizenz (c.f. [http://www.wtfpl.net](http://www.wtfpl.net)) verwendet werden. Dieser Code soll der Allgemeinheit nützlich sein, bedingt jedoch SÄMTLICHE HAFTUNGSANSPRÜCHE UND GARANTIEN in vollem Umfang weg.
+
+&nbsp;
+

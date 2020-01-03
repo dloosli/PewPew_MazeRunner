@@ -59,3 +59,8 @@ It is recommended to use the PewPew Emulator for the further development and the
 
 &nbsp;
 
+## License ##
+All files in this repository are free software and can be used under the terms of the WTFPL License (c.f. [http://www.wtfpl.net](http://www.wtfpl.net)). The code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+&nbsp;
+
