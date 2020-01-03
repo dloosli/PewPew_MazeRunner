@@ -1,4 +1,4 @@
-# Maze Runner - Konfiguration#
+# Maze Runner - Konfiguration #
 
 &nbsp;
 
