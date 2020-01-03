@@ -23,6 +23,16 @@ s1_maze = [[1, 1, 1, 1, 1, 1, 1, 1],
            [1, 1, 1, 1, 1, 1, 1, 1]]
 
 
+s1_runner = MazeRunner(0, 1)
+
+
+s1_keyboard = KeyBoard()
+s1_keyboard.register(KeyBoard.KEY_ID_DOWN, s1_runner.walk_down)
+s1_keyboard.register(KeyBoard.KEY_ID_UP, s1_runner.walk_up)
+s1_keyboard.register(KeyBoard.KEY_ID_RIGHT, s1_runner.walk_right)
+s1_keyboard.register(KeyBoard.KEY_ID_LEFT, s1_runner.walk_left)
+
+
 o0s1_entry = Obstacle(0, 1)
 o0s1_entry.register(Obstacle.maze_entry)
 
@@ -49,13 +59,4 @@ o3s1_exit.register(Obstacle.maze_exit)
 
 s1_obstacles = [o0s1_entry, o1s1_key, o2s1_door, o3s1_exit]
 
-
-s1_runner = MazeRunner(0, 1)
-
-
-s1_keyboard = KeyBoard()
-s1_keyboard.register(KeyBoard.KEY_ID_DOWN, s1_runner.walk_down)
-s1_keyboard.register(KeyBoard.KEY_ID_UP, s1_runner.walk_up)
-s1_keyboard.register(KeyBoard.KEY_ID_RIGHT, s1_runner.walk_right)
-s1_keyboard.register(KeyBoard.KEY_ID_LEFT, s1_runner.walk_left)
 

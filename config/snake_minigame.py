@@ -6,7 +6,9 @@ import random
  #   @name  Snake
  #   @type  class
  #
- #   @usage text
+ #   @usage an object-oriented copy of the official
+ #          snake game on the PewPew board as mini
+ #          game.
 ##
 class Snake:
 
@@ -86,7 +88,8 @@ class Snake:
  #   @name  Apple
  #   @type  class
  #
- #   @usage text
+ #   @usage a randomly generated apple that has to
+ #          be eaten by the snake.
 ##
 class Apple:
 

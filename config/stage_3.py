@@ -13,7 +13,7 @@ from lib.utilities import KeyBoard, TextPrinter
  #          should demonstrate the configuration
  #          for (combined) obstacles in a maze with
  #          a size greater than the 8x8 display on
- #          the pewpew.
+ #          the PewPew.
 ##
 s3_maze = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
            [0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1],
@@ -31,6 +31,16 @@ s3_maze = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
            [1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1],
            [1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0],
            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+
+
+s3_runner = MazeRunner(0, 1)
+
+
+s3_keyboard = KeyBoard()
+s3_keyboard.register(KeyBoard.KEY_ID_DOWN, s3_runner.walk_down)
+s3_keyboard.register(KeyBoard.KEY_ID_UP, s3_runner.walk_up)
+s3_keyboard.register(KeyBoard.KEY_ID_RIGHT, s3_runner.walk_right)
+s3_keyboard.register(KeyBoard.KEY_ID_LEFT, s3_runner.walk_left)
 
 
 o0s3_entry = Obstacle(0, 1)
@@ -77,13 +87,4 @@ o5s3_exit.register(Obstacle.maze_exit)
 
 s3_obstacles = [o0s3_entry, o1s3_key, o2s3_door, o3s3_key, o4s3_door, o5s3_exit]
 
-
-s3_runner = MazeRunner(0, 1)
-
-
-s3_keyboard = KeyBoard()
-s3_keyboard.register(KeyBoard.KEY_ID_DOWN, s3_runner.walk_down)
-s3_keyboard.register(KeyBoard.KEY_ID_UP, s3_runner.walk_up)
-s3_keyboard.register(KeyBoard.KEY_ID_RIGHT, s3_runner.walk_right)
-s3_keyboard.register(KeyBoard.KEY_ID_LEFT, s3_runner.walk_left)
 
