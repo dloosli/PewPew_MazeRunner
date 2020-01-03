@@ -1,0 +1,16 @@
+# byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# PewPew emulator
+pew.py
+
+# Hidden Files
+.*
+
+# Exceptions
+!.gitignore
