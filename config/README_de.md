@@ -5,7 +5,7 @@
 ## Vorbemerkung ##
 In diesem Ordner des Repositorys finden sich sämtliche Dateien, die zur Erstellung einer Konfiguration benötigt werden.
 
-Eine Konfiguration besteht aus einer oder mehreren Levels (sog. stages), die vom Spieler durchlaufen werden müssen. Die Stages wiederum entsprechen einem Objekt der Klasse `Maze` bestehend aus einem KeyBoard Objekt (sog. keyboard) für die Belegung der Knöpfe am PewPew Board, einem Labyrinth (sog. maze), einem Läufer (sog. MazeRunner) und zwei oder mehr Hindernissen (sog. obstacles).
+Eine Konfiguration besteht aus einer oder mehreren Levels (sog. stages), die vom Spieler durchlaufen werden müssen. Die Stages wiederum entsprechen einem Objekt der Klasse `Maze` bestehend aus einem `KeyBoard` Objekt (sog. keyboard) für die Belegung der Knöpfe am PewPew Board, einem Labyrinth (sog. maze), einem Läufer (sog. runner) und zwei oder mehr Hindernissen (sog. obstacles).
 
 Ziel des Spiel ist es, einen Weg durch das Labyrinth zu finden und sämtliche Hindernisse zu bewältigen.
 
@@ -40,7 +40,7 @@ Um eine eigene Konfiguration erstellen zu können, muss zuerst eine sog. Stage k
 
 1. _Schritt 1 - Modul_: Erstelle eine Python Datei mit beliebigem Namen. Bei Stage 4 wurde bspw. der Name `stage_4.py` verwendet.
 
-2. _Schritt 2 - Import_: Öffne die Datei mit einem Editor und importiere die Module, die für die Konfiguration benötigt werden. Bei Stage 4 musste bswp. neben den nachfolgend genannten Modulen auch noch das Minigame 'Snake' importiert werden.
+2. _Schritt 2 - Import_: Öffne die Datei mit einem Editor und importiere die Module, die für die Konfiguration benötigt werden. Bei Stage 4 musste bspw. neben den nachfolgend genannten Modulen auch noch das Minigame 'Snake' importiert werden.
 
 ```python
     from lib.maze      import MazeRunner, Obstacle
@@ -54,7 +54,7 @@ Um eine eigene Konfiguration erstellen zu können, muss zuerst eine sog. Stage k
 
 4. _Schritt 4 - Läufer_: Der Läufer entspricht einer Instanz der Klasse `MazeRunner`, wobei als Parameter die x- und y-Position des Läufers übergeben werden kann. Obwohl der Läufer grundsätzlich überall starten kann, dürfte es sinnvoll sein, diesen zu Beginn auf das Hindernis 'Maze Entry' (d.h. Labyrinth Eingang) platzieren. Dazu kann entweder die korrekte Position des Eingangs angegeben werden (vgl. dazu bspw. Stage 4) oder eine beliebige illegale Position (bspw. `MazeRunner(-1, -1)`).
 
-5. _Schritt 5 - Keyboard_: Jede Stage benötigt eine Instanz der Klasse `KeyBoard` und korrekt registrierte Methoden, welche beim Drücken des jeweiligen Knopfes auf dem PewPew Board aufgerufen werden. Grundsätzlich sieht dies für jede Konfiguration gleich aus, d.h. analog zur Stage 4 mit Erstellen eines KeyBoard Objekts und Registrierung der korrekten `walk` Methoden (bswp. `walk_down`) für den korrekten Knopf (bswp. `KeyBoard.KEY_ID_DOWN`) des in Schritt 4 erstellten Läufers:
+5. _Schritt 5 - Keyboard_: Jede Stage benötigt eine Instanz der Klasse `KeyBoard` und korrekt registrierte Methoden, welche beim Drücken des jeweiligen Knopfes auf dem PewPew Board aufgerufen werden. Grundsätzlich sieht dies für jede Konfiguration gleich aus, d.h. analog zur Stage 4 mit Erstellen eines KeyBoard Objekts und Registrierung der korrekten `walk` Methoden (bspw. `walk_down`) für den korrekten Knopf (bspw. `KeyBoard.KEY_ID_DOWN`) des in Schritt 4 erstellten Läufers:
 
 ```python
     s4_keyboard = KeyBoard()
