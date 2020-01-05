@@ -191,14 +191,14 @@ class MazeRunner:
                     self._parent_maze.update(centered)
 
 
-    def update_ticker(self):
+    def update(self):
         self._ticker = (self._ticker + 1) % 6
         if self._ticker == 0:
             self._color = (self._color + 3) % 6
 
 
     def paint(self, screen, x_offset, y_offset):
-        self.update_ticker()
+        self.update()
         screen.pixel((self._x_location + x_offset),
                      (self._y_location + y_offset),
                       self._color)
@@ -256,7 +256,7 @@ class Obstacle:
         self._fullfilled = True
 
 
-    def update_ticker(self):
+    def update(self):
         if self._ticker == 31:
             self._ticker_up = False
             self._ticker = (self._ticker - 7)
@@ -274,7 +274,7 @@ class Obstacle:
             screen.pixel((self._x_location + x_offset),
                          (self._y_location + y_offset), 0)
         else:
-            self.update_ticker()
+            self.update()
             screen.pixel((self._x_location + x_offset),
                          (self._y_location + y_offset), self.color)
 
